@@ -13,11 +13,13 @@ define('CONTROLLERS_PATH', APP_PATH . DS . 'Controller');
 define('LIB_PATH', APP_PATH . DS . 'public');
 
 
+
+
+
 // DB Connection
 $db = mysqli_connect("localhost","root","","cafe_system");
 $path = get_include_path().PS.LIB_PATH;
 set_include_path($path);
-
 
 
 

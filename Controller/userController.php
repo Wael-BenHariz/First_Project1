@@ -1,4 +1,6 @@
 <?php
+//require_once '../dbconnect.php';
+
 require '../config.php';
 if(isset($_SESSION['id']))
 {

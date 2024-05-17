@@ -1,4 +1,6 @@
 <?php
+//require_once '../dbconnect.php';
+
 require_once '..' . DIRECTORY_SEPARATOR . 'config.php'; 
  $errorArray = [];
  $statusMsg = [];

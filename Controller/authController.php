@@ -1,5 +1,6 @@
 <?php
 require '../config.php';
+//require_once '../dbconnect.php';
 if(isset($_SESSION['id']))
 {
     $userId = $_SESSION['id'];

@@ -48,4 +48,5 @@ class Admin
         $res = mysqli_query($this->conn, $selectQuery);
         return $res;
     }
+    public function selectChecks(){}
 }

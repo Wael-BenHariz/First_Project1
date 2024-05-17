@@ -1,4 +1,5 @@
 <?php
+//require_once '../dbconnect.php';
 
 function to_time_ago( $time ) {
       
