@@ -25,8 +25,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Picture</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Table</th>
-                        <th scope="col">Ext</th>
+                      <!--  <th scope="col">Table</th>
+                        <th scope="col">Ext</th> -->
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -39,8 +39,6 @@
                         <th scope='row'>{$i}</th>
                         <td><img src={$row['image']}></td>
                         <td>{$row['user_name']}</td>
-                        <td>{$row['table_number']}</td>
-                        <td>{$row['ext']}</td>
                         <td><a href='./editUser.php?id={$row['user_id']}' class='btn btn-warning'  style='color:white'><i class='fa fa-cog'></i></a>
                         <a class='btn btn-danger' href='../Controller/userController.php?id={$row['user_id']}'><i class='far fa-trash'></i></a></td>
                         </tr>";
@@ -52,5 +50,6 @@
           </div>
        </div>
        <script src="../Public/js/loader.js"></script>
+       <?php include 'layout/adminFooter.php'?>
     </body>
 </html>

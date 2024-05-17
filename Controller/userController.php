@@ -104,7 +104,6 @@ if($db)
                         $result= mysqli_query($db,"insert into users set
                         user_name='$username', email='$email',
                         password='$password', image='$upfile'");
-                
                         if($result)
                         {
                             header("Location:../Views/listUsers.php");

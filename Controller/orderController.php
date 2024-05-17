@@ -22,12 +22,12 @@ if (isset($_POST['addOrder']))
     $OrderAmount = (array_values($vals));
     $prods = (array_keys($vals));
     $OrderId = $addOrder->add_Order();
-    /*for ($i = 0; $i < count($prods); $i++) 
+    for ($i = 0; $i < count($prods); $i++) 
     {
         echo ("<br>");
         $addOrder->Order_Product($OrderId, $prods[$i], $OrderAmount[$i]);
         echo ("<br>");
-    }*/
+    }
     header("Location:../Views/DisplayOrders.php");
 
 } 

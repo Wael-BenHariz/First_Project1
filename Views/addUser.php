@@ -41,13 +41,14 @@
                 <span> <?php if(in_array("password",$errordata))echo "  *password is empty";?></span>
             </div>
 
+            <!--
             <div class="form-group">
                 <input type="text" class="form-input" placeholder="Table Number" name="table_number">
             </div>
 
             <div class="form-group">
                 <input type="number" class="form-input" placeholder="Ext" name="ext">
-            </div>
+            </div>-->
             <div class="form-group">
                 <input type="file" class="form-input" placeholder="Ext" name="userfile">
                 <span> <?php if(in_array("file",$errordata))echo "  *upload ur image";?></span>

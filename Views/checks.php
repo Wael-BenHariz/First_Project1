@@ -1,22 +1,23 @@
-
 <html>
-    <head>
-        <title>Cafe | Checks</title>
-        <link href="../Public/css/loader.css" rel="stylesheet" />
-    </head>
-    <body  onload="Loader()">
+
+<head>
+    <title>Cafe | Checks</title>
+    <link href="../Public/css/loader.css" rel="stylesheet" />
+</head>
+
+<body onload="Loader()">
     <div id="loader" class="loader">
         <div id="team">BY <i class="fa fa-heart"></i> wael x chokri </div>
     </div>
     <div id="main-div" style="display:none;">
-    <?php include 'layout/adminHeader.php' ?>
+        <?php include 'layout/adminHeader.php' ?>
         <div class="container">
             <div class="row mb-3">
                 <div class="input-group my-3 col-sm-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">From</span>
                     </div>
-                    <input id="dateFrom" type="date" class="form-control" placeholder="Date From"  aria-describedby="basic-addon2">
+                    <input id="dateFrom" type="date" class="form-control" placeholder="Date From" aria-describedby="basic-addon2">
                 </div>
                 <div class="input-group my-3 col-sm-3">
                     <div class="input-group-prepend">
@@ -31,21 +32,19 @@
                         $admin = new Admin();
                         $data = $admin->getOrders();
                         $ordersData = [];
-                        while ($row = mysqli_fetch_assoc($data)) 
-                        {
+                        while ($row = mysqli_fetch_assoc($data)) {
                             array_push($ordersData, $row);
                         }
 
-                        foreach ($ordersData as $row) 
-                        { ?>
+                        foreach ($ordersData as $row) { ?>
                             <option data-id="<?php echo $row['user_id'] ?>"> <?php echo $row['user_name'] ?> </option>
-                        <?php 
-                        } 
+                        <?php
+                        }
                         ?>
                     </select>
                 </div>
                 <div class="input-group my-3 col-sm-3">
-                    <button id="filter" class="btn btn-primary"> <i class="far fa-filter"></i> Filter Orders  </button>
+                    <button id="filter" class="btn btn-primary"> <i class="far fa-filter"></i> Filter Orders </button>
                 </div>
             </div>
             <table class="table table-striped text-center">
@@ -72,8 +71,7 @@
             </table>
 
             <?php
-            foreach ($ordersData as $row) 
-            {
+            foreach ($ordersData as $row) {
                 $orderDetails = $admin->getOrderData($row['user_id']);
             ?>
                 <div class="modal fade" id="Modal<?php echo $row['user_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -146,5 +144,5 @@
         </div>
     </div>
     <script src="../Public/js/loader.js"></script>
-    </body>
+</body>
 <?php include 'layout/adminFooter.php' ?>
